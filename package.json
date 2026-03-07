@@ -1,0 +1,27 @@
+{
+  "name": "bdd-pom-automation",
+  "version": "1.0.0",
+  "description": "Cucumber BDD Playwright TypeScript Automation Framework with POM",
+  "main": "index.js",
+  "scripts": {
+    "test": "cucumber-js && start \"\" \"test-results/cucumber-report.html\" || start \"\" \"test-results/cucumber-report.html\"",
+    "test:demo1": "cucumber-js --config cucumber.demo1.js && start \"\" \"test-results/demo1-report.html\" || start \"\" \"test-results/demo1-report.html\"",
+    "test:form": "cucumber-js --config cucumber.form.js && start \"\" \"test-results/form-report.html\" || start \"\" \"test-results/form-report.html\"",
+    "test:report": "cucumber-js --format html:test-results/report.html && start \"\" \"test-results/report.html\" || start \"\" \"test-results/report.html\"",
+    "test:chrome": "cucumber-js --runner=playwright --browser=chromium",
+    "test:firefox": "cucumber-js --runner=playwright --browser=firefox",
+    "test:webkit": "cucumber-js --runner=playwright --browser=webkit"
+  },
+  "keywords": ["BDD", "Cucumber", "Playwright", "TypeScript"],
+  "author": "Gurjeet Singh",
+  "license": "ISC",
+  "devDependencies": {
+    "@cucumber/cucumber": "^9.5.1",
+    "@playwright/test": "^1.40.1",
+    "@types/node": "^20.10.6",
+    "playwright": "^1.40.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {}
+}
