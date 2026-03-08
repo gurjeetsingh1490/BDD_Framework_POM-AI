@@ -1,4 +1,4 @@
-Feature: Form Registration Test Automation
+Feature: Registration Form Test Automation  Script
 
   Scenario: Fill and Submit a Registration Form
     When i open the URL "https://testautomationpractice.blogspot.com/"

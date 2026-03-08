@@ -11,7 +11,7 @@ class BrowserManager {
   static async launchBrowser(browserType: string = 'chromium'): Promise<Page> {
     try {
       const headlessEnv = process.env.HEADLESS;
-      const headless = headlessEnv ? headlessEnv.toLowerCase() === 'true' : true; // default true
+      const headless = headlessEnv ? headlessEnv.toLowerCase() === 'true' : false; // default false
       const args = [];
       if (!headless) {
         args.push('--start-maximized');
