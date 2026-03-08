@@ -3,7 +3,7 @@ import { BasePage } from './BasePage';
 
 export class FormPage extends BasePage {
   // Selectors for form fields
-  readonly nameFieldSelector = 'input[id="name"]';
+  readonly nameFieldSelector;
   readonly emailFieldSelector = 'input[name="email"], input[placeholder="Email"], input[id="email"], input[type="email"]';
   readonly phoneFieldSelector = 'input[name="phone"], input[placeholder="Phone"], input[id="phone"], input[type="tel"]';
   readonly addressFieldSelector = "//label[text()='Address:']//following-sibling::textarea";
@@ -28,7 +28,10 @@ export class FormPage extends BasePage {
 
   readonly playwrightPracticeSelector="//a[text()='PlaywrightPractice']";
   constructor(page: Page) {
+
     super(page);
+    this.nameFieldSelector = 'input[id="name"]';
+    
   }
 
   async enterName(name: string): Promise<void> {
